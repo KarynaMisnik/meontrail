@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "@types/react": "^19.2.15",
+    "@types/react-native": "^0.72.8",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "expo": "^56.0.5"
+  }
+}
