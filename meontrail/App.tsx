@@ -1,6 +1,6 @@
 import { Text, View, StyleSheet } from "react-native";
 
-export default function HomeScreen() {
+export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Hello World 👋</Text>
@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
+    backgroundColor: "black",
   },
   text: {
     color: "white",
