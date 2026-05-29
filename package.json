@@ -5,6 +5,6 @@
     "typescript": "^6.0.3"
   },
   "dependencies": {
-    "expo": "^56.0.5"
+    "expo": "~54.0.0"
   }
 }
