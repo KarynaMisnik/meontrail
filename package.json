@@ -1,6 +1,6 @@
 {
   "name": "meontrail",
-  "main": "expo-router/entry",
+  "main": "expo/AppEntry",
   "version": "1.0.0",
   "scripts": {
     "start": "expo start",
