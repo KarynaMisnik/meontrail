@@ -1,15 +1,25 @@
 import { useRouter } from "expo-router";
 import { useState } from "react";
-import { Modal, Pressable, Text, View } from "react-native";
+import { FlatList, Modal, Pressable, Text, View } from "react-native";
+import { parks } from "../data/parks";
 
 export default function ParkDetails() {
   const router = useRouter();
   const [visible, setVisible] = useState(false);
   return (
     <View>
-      <Text>Park Name</Text>
-      <Text>Description</Text>
-      <Text>Img here</Text>
+      <FlatList
+        data={parks}
+        keyExtractor={(item) => item.id.toString()}
+        renderItem={({ item }) => (
+          <View>
+            <Text>{item.name}</Text>
+            <Text>{item.description}</Text>
+            <Text>Img here</Text>
+          </View>
+        )}
+      />
+
       <Pressable
         onPress={() => setVisible(true)}
         style={{
@@ -18,7 +28,7 @@ export default function ParkDetails() {
           borderRadius: 8,
         }}
       >
-        View Trails Modal
+        <Text>View Trails Modal</Text>
       </Pressable>
 
       <Modal visible={visible} transparent={true} animationType="fade">
