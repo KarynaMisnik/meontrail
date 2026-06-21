@@ -1,6 +1,7 @@
 import { useRouter } from "expo-router";
 import React from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
+import { colors } from "../constants/colors";
 
 export default function HomeScreen() {
   const router = useRouter();
@@ -24,7 +25,7 @@ export default function HomeScreen() {
           borderRadius: 8,
         }}
       >
-        <Text style={{ color: "white" }}>Go to Parks</Text>
+        <Text style={styles.text}>Go to Parks</Text>
       </Pressable>
     </View>
   );
@@ -38,7 +39,7 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   text: {
-    color: "white",
+    color: colors.text,
     fontSize: 20,
   },
 });
