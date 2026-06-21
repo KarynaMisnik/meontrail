@@ -11,23 +11,22 @@ export default function Parks() {
         data={parks}
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
-          <View style={styles.card}>
-            <Text style={styles.name}>{item.name}</Text>
-            <Text style={styles.description}>{item.description}</Text>
-          </View>
+          <Pressable
+            onPress={() => router.push(`/ParkDetails/${item.id}`)}
+            style={{
+              backgroundColor: "green",
+              padding: 12,
+              borderRadius: 8,
+              margin: 8,
+            }}
+          >
+            <View style={styles.card}>
+              <Text style={styles.name}>{item.name}</Text>
+              <Text style={styles.description}>{item.description}</Text>
+            </View>
+          </Pressable>
         )}
       />
-
-      <Pressable
-        onPress={() => router.push("/ParkDetails")}
-        style={{
-          backgroundColor: "green",
-          padding: 12,
-          borderRadius: 8,
-        }}
-      >
-        View Details
-      </Pressable>
     </View>
   );
 }
@@ -46,8 +45,6 @@ const styles = StyleSheet.create({
   card: {
     marginBottom: 16,
     padding: 16,
-    borderWidth: 1,
-    borderRadius: 8,
   },
   name: {
     fontSize: 18,
