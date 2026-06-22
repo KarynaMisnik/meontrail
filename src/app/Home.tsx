@@ -27,6 +27,16 @@ export default function HomeScreen() {
       >
         <Text style={styles.text}>Go to Parks</Text>
       </Pressable>
+      <Pressable
+        onPress={() => router.push("/CommunityBoard")}
+        style={{
+          backgroundColor: "purple",
+          padding: 12,
+          borderRadius: 8,
+        }}
+      >
+        <Text style={styles.text}>Community Board</Text>
+      </Pressable>
     </View>
   );
 }
