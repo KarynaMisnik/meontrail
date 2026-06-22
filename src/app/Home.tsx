@@ -1,7 +1,7 @@
 import { useRouter } from "expo-router";
 import React from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
-import { colors } from "../constants/colors";
+import { typography } from "../constants/typography";
 
 export default function HomeScreen() {
   const router = useRouter();
@@ -15,7 +15,7 @@ export default function HomeScreen() {
           borderRadius: 8,
         }}
       >
-        <Text style={styles.text}>MeOnTrail</Text>
+        <Text style={typography.title}>MeOnTrail</Text>
       </Pressable>
       <Pressable
         onPress={() => router.push("/Parks")}
@@ -25,7 +25,17 @@ export default function HomeScreen() {
           borderRadius: 8,
         }}
       >
-        <Text style={styles.text}>Go to Parks</Text>
+        <Text style={typography.title}>Go to Parks</Text>
+      </Pressable>
+      <Pressable
+        onPress={() => router.push("/CommunityBoard")}
+        style={{
+          backgroundColor: "purple",
+          padding: 12,
+          borderRadius: 8,
+        }}
+      >
+        <Text style={typography.title}>Community Board</Text>
       </Pressable>
     </View>
   );
@@ -37,9 +47,5 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: "black",
     gap: 10,
-  },
-  text: {
-    color: colors.text,
-    fontSize: 20,
   },
 });
