@@ -1,12 +1,13 @@
-import { useRouter } from "expo-router";
-import React from "react";
-import { Text, View } from "react-native";
+import { FlatList } from "react-native";
+import Post from "../components/Post";
+import { posts } from "../data/posts";
 
 export default function CommunityBoard() {
-  const router = useRouter();
   return (
-    <View>
-      <Text>This is Community Board</Text>
-    </View>
+    <FlatList
+      data={posts}
+      keyExtractor={(item) => item.id.toString()}
+      renderItem={({ item }) => <Post post={item} />}
+    />
   );
 }
