@@ -1,5 +1,6 @@
 import { useRouter } from "expo-router";
 import { FlatList, Pressable, StyleSheet, Text, View } from "react-native";
+import { spacing } from "../constants/spacing";
 import { parks } from "../data/parks";
 
 export default function Parks() {
@@ -15,9 +16,9 @@ export default function Parks() {
             onPress={() => router.push(`/ParkDetails/${item.id}`)}
             style={{
               backgroundColor: "green",
-              padding: 12,
+              padding: spacing.md,
               borderRadius: 8,
-              margin: 8,
+              margin: spacing.sm,
             }}
           >
             <View style={styles.card}>
@@ -36,20 +37,20 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "black",
-    gap: 10,
+    gap: spacing.gap,
   },
   text: {
     color: "white",
     fontSize: 20,
   },
   card: {
-    marginBottom: 16,
-    padding: 16,
+    marginBottom: spacing.md,
+    padding: spacing.md,
   },
   name: {
     fontSize: 18,
     fontWeight: "bold",
-    marginBottom: 8,
+    marginBottom: spacing.sm,
     color: "white",
   },
   description: {
