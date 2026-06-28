@@ -1,6 +1,7 @@
 import { useRouter } from "expo-router";
 import { useState } from "react";
 import { FlatList, Modal, Pressable, Text, View } from "react-native";
+import { spacing } from "../constants/spacing";
 import { parks } from "../data/parks";
 
 export default function ParkDetails() {
@@ -24,8 +25,8 @@ export default function ParkDetails() {
         onPress={() => setVisible(true)}
         style={{
           backgroundColor: "green",
-          padding: 12,
-          borderRadius: 8,
+          padding: spacing.md,
+          borderRadius: spacing.sm,
         }}
       >
         <Text>View Trails Modal</Text>
@@ -43,7 +44,7 @@ export default function ParkDetails() {
           <View
             style={{
               backgroundColor: "white",
-              padding: 20,
+              padding: spacing.lg,
               borderRadius: 12,
             }}
           >
