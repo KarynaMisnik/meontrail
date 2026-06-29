@@ -1,14 +1,11 @@
 export const colors = {
-  background: "#0B0F14",
-  surface: "#121821",
-
+  background: "#111827",
+  card: "#1F2937",
   primary: "#4CAF50",
-  primaryDark: "#3D8B40",
-
-  text: "#fffdff",
-  textSecondary: "#A6B0BE",
-
-  border: "#1F2A36",
+  text: "#FFFFFF",
+  btnText: "#000000",
+  secondary: "#9CA3AF",
+  border: "#374151",
 
   danger: "#FF4D4D",
 };

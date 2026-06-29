@@ -3,7 +3,7 @@ import { colors } from "./colors";
 
 export const typography: Record<string, TextStyle> = {
   title: {
-    fontSize: 20,
+    fontSize: 24,
     color: "#fff",
     fontWeight: "600",
   },
@@ -15,6 +15,6 @@ export const typography: Record<string, TextStyle> = {
 
   small: {
     fontSize: 12,
-    color: colors.textSecondary,
+    color: colors.secondary,
   },
 };
