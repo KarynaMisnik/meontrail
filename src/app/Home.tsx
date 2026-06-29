@@ -2,6 +2,7 @@ import { useRouter } from "expo-router";
 import React from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import { colors } from "../constants";
+import { radii } from "../constants/radii";
 import { spacing } from "../constants/spacing";
 import { typography } from "../constants/typography";
 
@@ -18,7 +19,7 @@ export default function HomeScreen() {
           style={{
             backgroundColor: colors.primary,
             padding: spacing.md,
-            borderRadius: spacing.sm,
+            borderRadius: radii.md,
           }}
         >
           <Text style={typography.title}>Go to Parks</Text>
@@ -28,7 +29,7 @@ export default function HomeScreen() {
           style={{
             backgroundColor: "purple",
             padding: spacing.md,
-            borderRadius: spacing.sm,
+            borderRadius: radii.sm,
           }}
         >
           <Text style={typography.title}>Community Board</Text>
